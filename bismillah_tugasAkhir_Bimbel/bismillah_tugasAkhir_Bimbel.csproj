@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +36,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +58,98 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bimbelhimalayaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bimbelhimalayaDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bimbelhimalayaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kelas\Koneksi.cs" />
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartItem.cs" />
+    <Compile Include="pembayaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pembayaran.Designer.cs">
+      <DependentUpon>pembayaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pendaftaran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pendaftaran.Designer.cs">
+      <DependentUpon>pendaftaran.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tabelBayar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tabelBayar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestClass.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pembayaran.resx">
+      <DependentUpon>pembayaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pendaftaran.resx">
+      <DependentUpon>pendaftaran.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +158,108 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bimbelhimalayaDataSet.xsc">
+      <DependentUpon>bimbelhimalayaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet.xss">
+      <DependentUpon>bimbelhimalayaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet1.xsc">
+      <DependentUpon>bimbelhimalayaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet1.xss">
+      <DependentUpon>bimbelhimalayaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet2.xsc">
+      <DependentUpon>bimbelhimalayaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet2.xss">
+      <DependentUpon>bimbelhimalayaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet3.xsc">
+      <DependentUpon>bimbelhimalayaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet3.xss">
+      <DependentUpon>bimbelhimalayaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet4.xsc">
+      <DependentUpon>bimbelhimalayaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet4.xss">
+      <DependentUpon>bimbelhimalayaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet5.xsc">
+      <DependentUpon>bimbelhimalayaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet5.xss">
+      <DependentUpon>bimbelhimalayaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet6.xsc">
+      <DependentUpon>bimbelhimalayaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet6.xss">
+      <DependentUpon>bimbelhimalayaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet7.xsc">
+      <DependentUpon>bimbelhimalayaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet7.xss">
+      <DependentUpon>bimbelhimalayaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet8.xsc">
+      <DependentUpon>bimbelhimalayaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="bimbelhimalayaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bimbelhimalayaDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bimbelhimalayaDataSet8.xss">
+      <DependentUpon>bimbelhimalayaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -72,9 +269,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="tabelBayar.xsc">
+      <DependentUpon>tabelBayar.xsd</DependentUpon>
+    </None>
+    <None Include="tabelBayar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tabelBayar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tabelBayar.xss">
+      <DependentUpon>tabelBayar.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pabsgd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pabs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qq.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+  </Target>
 </Project>
